@@ -16,6 +16,14 @@ public class Dealership {
         inventory = new ArrayList<>();
     }
 
+    public ArrayList<Vehicle> getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(ArrayList<Vehicle> inventory) {
+        this.inventory = inventory;
+    }
+
     public String getName() {
         return name;
     }
