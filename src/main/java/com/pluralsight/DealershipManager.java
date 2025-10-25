@@ -9,7 +9,6 @@ public class DealershipManager {
         try (BufferedReader br = new BufferedReader(new FileReader("dealership.csv"))) {
 
             String line = br.readLine();
-            int i = 0;
 
             String[] parts = line.split("\\|");
             String name = parts[0];
@@ -18,7 +17,6 @@ public class DealershipManager {
             Dealership dealership = new Dealership(name, address, phone);
             ArrayList<Vehicle> inventory = new ArrayList<>();
             while ((line = br.readLine()) != null) {
-                if (i != 0) {
                     String[] partsCar = line.split("\\|");
                     int vin = Integer.parseInt(partsCar[0]);
                     int year = Integer.parseInt((partsCar[1]));
@@ -29,8 +27,7 @@ public class DealershipManager {
                     int odometer = Integer.parseInt(partsCar[6]);
                     double price = Double.parseDouble(partsCar[7]);
                     inventory.add(new Vehicle(vin, year, make, model, vehicleType, color, odometer, price));
-                }
-                i++;
+
             }
             dealership.setInventory(inventory);
             return dealership;
