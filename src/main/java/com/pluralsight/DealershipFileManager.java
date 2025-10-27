@@ -3,7 +3,7 @@ package com.pluralsight;
 import java.io.*;
 import java.util.ArrayList;
 
-public class DealershipManager {
+public class DealershipFileManager {
 
     public Dealership getDealership() {
         try (BufferedReader br = new BufferedReader(new FileReader("dealership.csv"))) {
