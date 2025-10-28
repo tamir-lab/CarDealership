@@ -6,9 +6,6 @@ import java.util.Scanner;
 public class UserInterface {
     private Dealership dealership;
 
-    public UserInterface(Dealership dealership) {
-        this.dealership = dealership;
-    }
 
     public void display() {
         Scanner scanner = new Scanner(System.in);
@@ -48,7 +45,7 @@ public class UserInterface {
     }
 
     private void processGetAllVehiclesRequest() {
-
+        init();
         displayVehicles(dealership.getAllVehicles());
     }
 
